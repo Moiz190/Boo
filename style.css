@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: 'budokan';
+  src: url('budokan/BudokanRounded-Bold.otf') format('truetype');
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: 'budokan';
+}
+/* utility classes */
+
+/* Box-Shadow  */
+.box-shadow {
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+}
+.w-40{
+  width: 40%;
+}
+.w-70{
+  width: 70%;
+}
+/* Color  */
+.color-dullaqua {
+  color: #4edcd8;
+}
+.container__body__thumbnail__image{
+  min-width: 250px;
+  max-width: 300px;
+}
+.discover_personality_btn {
+  background-color: #4edcd8;
+}
+.discover_personality_btn:hover {
+  background-color: #42bab6;
+}
+.personality-type-container span {
+  font-size: 0.8rem;
+}
+.personality-type-container {
+  overflow-x: hidden;
+}
+.personality-type-container .single-personality-type {
+  min-width: 160px;
+  align-items: center;
+}
+.single-personality-type h5{
+  margin-bottom: 0;
+}
+.anime {
+  animation: loop 20s linear infinite;
+}
+
+/* Animation   Start */
+@keyframes loop {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* Media-Quries */
+@media (min-width: 768px) and (max-width: 950px) {
+  .display-6 {
+    font-size: 1.8rem;
+  }
+  .discover_personality_btn{
+    font-size: 0;
+  }
+  .btn::after {
+    font-size: 1rem;
+    content: "Take Test";
+    visibility: visible;
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .personality-test-section, .first-half-personality-types {
+    flex-direction: column;
+    width: 100%;
+  }
+  .personality-test-section > div {
+    width: 100%;
+    text-align: center;
+  }
+  .test__taken__card__info,.discover_personality_btn ,.personality-type-container{
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+  .anime {
+    width: 100%;
+    animation-play-state: paused;
+  }
+  .user_display-picture{
+    max-width:3rem;
+  }
+}
